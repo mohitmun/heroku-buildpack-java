@@ -78,3 +78,7 @@ if [ -f $BUILD_DIR/mvnw ]; then
   cache_copy ".m2/wrapper" $BUILD_DIR $CACHE_DIR
   rm -rf $BUILD_DIR/.m2
 fi
+
+for DIR in ".m2" ".maven" ; do
+  cp -r $CACHE_DIR/$DIR $BUILD_DIR/$DIR
+done
